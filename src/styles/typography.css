@@ -1,0 +1,110 @@
+/* src/styles/typography.css */
+
+/* Classes de tipografia baseadas no sistema de design, usando fontes web-safe */
+.text-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 38px;
+}
+
+.text-subtitle {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-card-title {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text-description {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.text-section-title {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-step-number {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.text-step-title {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-button {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Classes de cores baseadas no sistema de design */
+.bg-theme-background { background-color: #F4F1ED; }
+.bg-theme-card { background-color: #1E3A8A; }
+.bg-theme-primary { background-color: #295C7A; }
+.bg-theme-secondary { background-color: #F7A600; }
+.bg-theme-success { background-color: #4CAF50; }
+.bg-theme-error { background-color: #D32F2F; }
+.bg-theme-alert { background-color: #FFF3CD; }
+
+.text-theme-primary { color: #295C7A; }
+.text-theme-secondary { color: #F7A600; }
+.text-theme-text { color: #2C2C2C; }
+.text-theme-text-secondary { color: #7A7A7A; }
+.text-theme-success { color: #4CAF50; }
+.text-theme-error { color: #D32F2F; }
+.text-theme-alert { color: #856404; }
+
+.border-theme-primary { border-color: #295C7A; }
+.border-theme-secondary { border-color: #F7A600; }
+.border-theme-muted { border-color: #E5E7EB; }
+
+/* Gradientes personalizados */
+.bg-gradient-primary-secondary {
+  background: linear-gradient(135deg, #295C7A 0%, #F7A600 100%);
+}
+
+.text-gradient-primary-secondary {
+  background: linear-gradient(135deg, #295C7A 0%, #F7A600 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsividade para tipografia */
+@media (max-width: 768px) {
+  .text-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .text-section-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .text-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
