@@ -775,11 +775,12 @@ function App() {
                     fontFamily: 'Lato, Arial, sans-serif'
                   }}
                 >
-                  <div className="absolute inset-0" style={{
+                  <div className="absolute inset-0 group-hover/btn:translate-y-0" style={{
                     backgroundColor: themeColors.primary,
                     transform: 'translateY(100%)',
                     transition: 'transform 0.3s ease'
-                  }} className="group-hover/btn:translate-y-0" />
+                  }} 
+                />
                   <span className="relative z-10">{product.cta}</span>
                 </button>
               </div>
@@ -1283,11 +1284,12 @@ function App() {
               boxShadow: `0 0 20px ${themeColors.secondary}66`
             }}
           >
-            <div className="absolute inset-0" style={{
+            <div className="absolute inset-0 group-hover:translate-x-0" style={{
               backgroundColor: themeColors.primary,
               transform: 'translateX(-100%)',
               transition: 'transform 0.3s ease'
-            }} className="group-hover:translate-x-0" />
+            }} 
+            />
             <TrendingUp className="h-5 w-5 relative z-10" />
             <span className="relative z-10">{t.cta.button}</span>
           </button>
@@ -1324,11 +1326,12 @@ function App() {
               boxShadow: `0 0 20px ${themeColors.primary}66`
             }}
           >
-            <div className="absolute inset-0" style={{
+            <div className="absolute inset-0 group-hover:translate-x-0" style={{
               backgroundColor: themeColors.secondary,
               transform: 'translateX(-100%)',
               transition: 'transform 0.3s ease'
-            }} className="group-hover:translate-x-0" />
+            }} 
+            />
             <span className="relative z-10">{t.contact.cta}</span>
             <ArrowRight className="h-5 w-5 relative z-10" />
           </a>
