@@ -1,7 +1,4 @@
-/** @type {import("tailwindcss").Config} */
-import themeColors from "./src/styles/colors";
-import fonts from "./src/styles/fonts";
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -10,46 +7,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: themeColors.background,
-        card: themeColors.card,
-        primary: themeColors.primary,
-        secondary: themeColors.secondary,
-        success: themeColors.success,
-        error: themeColors.error,
-        text: themeColors.text,
-        textSecondary: themeColors.textSecondary,
-        alertBackground: themeColors.alertBackground,
-        alertText: themeColors.alertText,
-        // Aliases para compatibilidade com o código existente
-        accent: themeColors.secondary,
-        muted: "#E5E7EB", // Cor neutra para elementos de fundo
+        background: '#F4F1ED',
+        card: '#1E3A8A',
+        primary: '#295C7A',
+        secondary: '#F7A600',
+        success: '#4CAF50',
+        error: '#D32F2F',
+        text: '#2C2C2C',
+        textSecondary: '#7A7A7A',
+        alertBackground: '#FFF3CD',
+        alertText: '#856404',
+        accent: '#F7A600',
+        muted: '#E5E7EB',
       },
       fontFamily: {
-        // Alternativas web-safe para DMSerifDisplay e Lato-Regular
-        "display": ["Georgia", "Times New Roman", "serif"],
-        "body": ["Arial", "Helvetica", "sans-serif"],
+        'title': ['"DM Serif Display"', 'Georgia', 'serif'],
+        'body': ['Lato', 'Arial', 'sans-serif'],
+        'display': ['"DM Serif Display"', 'Georgia', 'serif'],
+        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
+        'sans': ['Lato', 'Arial', 'sans-serif'],
       },
       fontSize: {
-        "title": [`${fonts.title.fontSize}px`, `${fonts.title.lineHeight}px`],
-        "subtitle": [`${fonts.subtitle.fontSize}px`, `${fonts.subtitle.lineHeight}px`],
-        "card-title": [`${fonts.cardTitle.fontSize}px`],
-        "description": [`${fonts.description.fontSize}px`, `${fonts.description.lineHeight}px`],
-        "section-title": [`${fonts.sectionTitle.fontSize}px`],
-        "step-number": [`${fonts.stepNumber.fontSize}px`],
-        "step-title": [`${fonts.stepTitle.fontSize}px`],
-        "button-text": [`${fonts.buttonText.fontSize}px`],
-      },
-      fontWeight: {
-        "title": fonts.title.fontWeight,
-        "subtitle": fonts.subtitle.fontWeight,
-        "card-title": fonts.cardTitle.fontWeight,
-        "description": fonts.description.fontWeight,
-        "section-title": fonts.sectionTitle.fontWeight,
-        "step-number": fonts.stepNumber.fontWeight,
-        "step-title": fonts.stepTitle.fontWeight,
-        "button-text": fonts.buttonText.fontWeight,
+        'title': ['32px', { lineHeight: '38px', fontWeight: '600' }],
+        'subtitle': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'card-title': ['18px', { lineHeight: '24px', fontWeight: '600' }],
+        'description': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+        'section-title': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+        'step-number': ['16px', { lineHeight: '24px', fontWeight: '600' }],
+        'button-text': ['18px', { lineHeight: '24px', fontWeight: '600' }],
       },
     },
   },
   plugins: [],
-};
+}

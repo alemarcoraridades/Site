@@ -1,55 +1,96 @@
-/* src/styles/typography.css */
+/* Typography System - AleMarco Raridades */
 
-/* Classes de tipografia baseadas no sistema de design, usando fontes web-safe */
-.text-title {
-  font-family: 'Georgia', 'Times New Roman', serif;
+/* Ensure fonts are loaded from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;600;700&display=swap');
+
+/* Base typography styles */
+html {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+/* Heading styles using DM Serif Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: '"DM Serif Display"', Georgia, serif;
+  font-weight: 600;
+}
+
+h1 {
   font-size: 32px;
-  font-weight: bold;
   line-height: 38px;
 }
 
-.text-subtitle {
-  font-family: 'Arial', 'Helvetica', sans-serif;
+h2 {
+  font-size: 28px;
+  line-height: 34px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Body text styles using Lato */
+p {
+  font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.text-card-title {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 18px;
+/* Utility classes for typography */
+.font-title {
+  font-family: '"DM Serif Display"', Georgia, serif;
   font-weight: 600;
 }
 
-.text-description {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 14px;
+.font-subtitle {
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-card-title {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font-description {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 20px;
 }
 
-.text-section-title {
-  font-family: 'Arial', 'Helvetica', sans-serif;
+.font-section-title {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 600;
   font-size: 20px;
-  font-weight: bold;
+  line-height: 28px;
 }
 
-.text-step-number {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.text-step-title {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 16px;
+.font-button {
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 600;
-}
-
-.text-button {
-  font-family: 'Arial', 'Helvetica', sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  line-height: 24px;
 }
 
 /* Classes de cores baseadas no sistema de design */
@@ -85,26 +126,33 @@
   background-clip: text;
 }
 
+/* Ensure text rendering is smooth */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Responsividade para tipografia */
 @media (max-width: 768px) {
-  .text-title {
+  h1 {
     font-size: 24px;
     line-height: 30px;
   }
   
-  .text-section-title {
-    font-size: 18px;
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
 @media (max-width: 480px) {
-  .text-title {
+  h1 {
     font-size: 20px;
     line-height: 26px;
   }
   
-  .text-subtitle {
-    font-size: 14px;
-    line-height: 20px;
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
   }
 }

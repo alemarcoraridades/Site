@@ -1,10 +1,9 @@
-
 const fonts = {
   // Títulos principais
   title: {
     fontFamily: 'DMSerifDisplay',
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: '600',
     lineHeight: 38,
   },
 
@@ -35,14 +34,14 @@ const fonts = {
   sectionTitle: {
     fontFamily: 'Lato-Regular',
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
 
   // Números de etapas (ex: 1, 2, 3...)
   stepNumber: {
     fontFamily: 'Lato-Regular',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
 
   // Título do passo
