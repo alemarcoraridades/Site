@@ -56,7 +56,7 @@ const translations = {
         {
           icon: "book",
           title: "E-books",
-          description: "Guias completos e aprofundados sobre avaliação e manutenção de carros clássicos.",
+          description: "Guias completos e aprofundados sobre avaliação de carros clássicos e manutenção de motores AP.",
           features: ["Conteúdo exclusivo", "Ilustrações detalhadas", "Acesso permanente"],
           cta: "Ver E-books",
           action: "scroll:ebook-page"
@@ -88,11 +88,9 @@ const translations = {
     },
 
     ebooks: { 
-      title:"Nossos eBooks reunem anos de conhecimento | e experiência prática",
-      message_avaliacao:"O guia completo para iniciantes avaliarem carros antigos com segurança.",
-      button_avaliacao: "Quero avaliar meu próximo carro Antigo",
-      message_manutencao:"Faça a manutenção do seu Motor Ap de forma descomplicada",
-      button_manutencao: "Quero meu eBook agora" 
+      title:"Ebook - Carro Antigo | Realize seu Sonho Agora",
+      message:"O guia completo para iniciantes avaliarem carros antigos com segurança.",
+      button:"Comprar Ebook" 
     },
 
     audiobook: {
@@ -222,7 +220,7 @@ const translations = {
         {
           icon: "book",
           title: "E-books",
-          description: "Comprehensive guides on evaluating and maintenance of  classic cars.",
+          description: "Comprehensive guides on evaluating classic cars and AP engine maintenance.",
           features: ["Exclusive content", "Detailed illustrations", "Permanent access"],
           cta: "View E-books",
           action: "scroll:ebook-page"
@@ -256,12 +254,8 @@ const translations = {
 
     ebooks: {
       title:"Ebook - Carro Antigo | Realize seu Sonho Agora",
-      message_avaliacao:"The full guide to beginners to evaluating classic cars with reliability.",
-      button_avaliacao :"I want to evaluate my new Classic Car",
-
-      message_manutencao:"Make simple and uncomplicated maintenance on your AP engine",
-      button_manutencao: "I want my eBook now"
-
+      message:"The full guide to beginners to evaluating classic cars with reliability.",
+      button:"Buy Ebook"
     },
 
     audiobook: {
@@ -915,85 +909,55 @@ function App() {
 )}
 
 {viewMode === "ebook" && (
+  <>
   <section id="ebook-page" style={{ paddingTop: 100 }}>
-    <div className="max-w-6xl mx-auto px-4">
-
-      {/* Título geral da seção */}
+    <div className="max-w-5xl mx-auto text-center px-4">
       <h2
-        className="text-4xl md:text-5xl font-bold text-center mb-12"
+        className="text-4xl md:text-5xl font-bold mb-4"
         style={{ fontFamily: '"DM Serif Display"', color: "#fff" }}
       >
         {t.ebooks?.title?.split("|").map((line, i) => (
-          <span key={i} className="block">
-            {line.trim()}
-          </span>
+        <span key={i} className="block">
+          {line.trim()}
+        </span>
         ))}
+
       </h2>
 
-      {/* GRID dos 2 eBooks */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-        {/* --- Ebook 1 --- */}
-        <div className="text-center bg-[#1A1F24] p-8 rounded-xl shadow-lg border border-yellow-500/20">
-          <img
-            src="/Ebook_avaliacao.png"
-            alt="Carro antigo realize seu sonho Agora"
-            className="w-full max-w-[350px] mx-auto object-contain rounded-lg shadow-xl mb-6"
-          />
-
-          <p
-            style={{
-              color: "#AAAAAA",
-              fontFamily: "Lato",
-              lineHeight: 1.8,
-            }}
-          >
-            {t.ebooks.message_avaliacao}
-          </p>
-
-          <button
-            onClick={() => window.open("https://pay.kiwify.com.br/ledgJsK", "_blank")}
-            className="px-8 py-4 rounded-xl mt-6"
-            style={{ background: "#295C7A", color: "white" }}
-          >
-            {t.ebooks.button_avaliacao}
-          </button>
-        </div>
-
-        {/* --- Ebook 2 --- */}
-        <div className="text-center bg-[#1A1F24] p-8 rounded-xl shadow-lg border border-yellow-500/20">
-          <img
-            src="/Ebook_motor_ap.jpg"
-            alt="Ebook Motor AP"
-            className="w-full max-w-[350px] mx-auto object-contain rounded-lg shadow-xl mb-6"
-          />
-
-          <p
-            style={{
-              color: "#AAAAAA",
-              fontFamily: "Lato",
-              lineHeight: 1.8,
-            }}
-          >
-            {t.ebooks.message_manutencao}
-          </p>
-
-          <button
-            onClick={() => window.open("https://pay.kiwify.com.br/eLZOieE", "_blank")}
-            className="px-8 py-4 rounded-xl mt-6"
-            style={{ background: "#295C7A", color: "white" }}
-          >
-            {t.ebooks.button_manutencao}
-          </button>
-        </div>
-
+      <div className="flex justify-center mb-8">
+        <img
+          src="/Ebook_avaliacao.jpg"
+          alt="Carro Antigo Realize seu Sonho Agora"
+          className="w-full max-w-[400px] object-contain rounded-lg shadow-xl"
+          style={{
+          borderRadius: 12,
+          }}
+        />
       </div>
+
+      <p
+        style={{
+          color: "#AAAAAA",
+          fontFamily: "Lato",
+          maxWidth: 600,
+          margin: "20px auto",
+          lineHeight: 1.8,
+        }}
+      >
+        {t.ebooks.message}
+      </p>
+
+      <button
+        onClick={() => window.open("https://pay.kiwify.com.br/ledgJsK", "_blank")}
+        className="px-8 py-4 rounded-xl"
+        style={{ background: "#295C7A", color: "white", marginTop: 30 }}
+      >
+        {t.ebooks.button}
+      </button>
     </div>
   </section>
+  </>
 )}
-
-
-
 
 {viewMode === "audiobook" && (
   <>
