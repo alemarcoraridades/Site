@@ -21,6 +21,10 @@ import {
 import themeColors from './styles/colors';
 import fonts from './styles/fonts'; 
 import './styles/typography.css';
+import Privacidade from "./pages/Privacidade"; 
+
+
+
 
 // Traduções PT/EN
 const translations = {
@@ -89,7 +93,7 @@ const translations = {
 
     ebooks: { 
       title:"Nossos eBooks reunem anos de conhecimento | e experiência prática",
-      message_avaliacao:"O guia completo para iniciantes avaliarem carros antigos com segurança.",
+      message_avaliacao:"O guia completo para iniciantes avaliarem carros antigos com segurança",
       button_avaliacao: "Quero avaliar meu próximo carro Antigo",
       message_manutencao:"Faça a manutenção do seu Motor Ap de forma descomplicada",
       button_manutencao: "Quero meu eBook agora" 
@@ -185,6 +189,7 @@ const translations = {
       cta: "Enviar Mensagem"
     },
     footer: {
+      privacy: "Política de Privacidade",
       copyright: "© 2025 AleMarco Raridades. Todos os direitos reservados.",
       followUs: "Nos acompanhe",
       tagline: "Plataforma Digital para Antigomobilismo"
@@ -255,8 +260,8 @@ const translations = {
     },
 
     ebooks: {
-      title:"Ebook - Carro Antigo | Realize seu Sonho Agora",
-      message_avaliacao:"The full guide to beginners to evaluating classic cars with reliability.",
+      title:"Our ebooks bring together years of knowledge and practical experience",
+      message_avaliacao:"The full guide to beginners to evaluating classic cars with reliability",
       button_avaliacao :"I want to evaluate my new Classic Car",
 
       message_manutencao:"Make simple and uncomplicated maintenance on your AP engine",
@@ -355,6 +360,7 @@ const translations = {
       cta: "Send Message"
     },
     footer: {
+      privacy: "Privacy Policy",
       copyright: "© 2025 AleMarco Raridades. All rights reserved.",
       followUs: "Follow us",
       tagline: "Digital Platform for Classic Car Enthusiasts"
@@ -952,7 +958,7 @@ function App() {
           </p>
 
           <button
-            onClick={() => window.open("https://pay.kiwify.com.br/ledgJsK", "_blank")}
+            onClick={() => window.open("https://sonhocarroantigo.com.br/carroantigo", "_blank")}
             className="px-8 py-4 rounded-xl mt-6"
             style={{ background: "#295C7A", color: "white" }}
           >
@@ -979,7 +985,7 @@ function App() {
           </p>
 
           <button
-            onClick={() => window.open("https://pay.kiwify.com.br/eLZOieE", "_blank")}
+            onClick={() => window.open("https://sonhocarroantigo.com.br/motorap", "_blank")}
             className="px-8 py-4 rounded-xl mt-6"
             style={{ background: "#295C7A", color: "white" }}
           >
@@ -1387,6 +1393,17 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
+
+              <a href={language === "en" ? "/privacidade_en.html" : "/privacidade.html"}
+              className="text-sm mb-2" target= "_blank" rel="noopener noreferrer"
+              style={{
+                  color: '#CCCCCC',
+                  fontFamily: 'Lato, Arial, sans-serif'
+                }}
+              >
+               {t.footer.privacy}
+              </a>
+ 
               <p 
                 className="text-sm mb-2"
                 style={{ 
@@ -1407,6 +1424,8 @@ function App() {
                 {t.footer.tagline}
               </p>
             </div>
+
+
             <div className="flex justify-end items-center space-x-4">
               <span 
                 className="text-sm font-medium"

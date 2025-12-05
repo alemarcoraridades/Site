@@ -1,61 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - AleMarco Classics</title>
+  <title>Política de Privacidade - AleMarco Classics</title>
   <link rel="stylesheet" href="/index.css" />
   <link rel="stylesheet" href="./src/styles/typography.css" />
+
+  <!-- Mesma fonte do site -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    /* Custom styles for this page to integrate with themeColors and fonts */
     body {
-      background-color: #F4F1ED; /* themeColors.background */
-      color: #2C2C2C; /* themeColors.text */
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #000; /* mesmo do App.tsx */
+      color: #fff;
+      line-height: 1.4;
     }
-    .text-primary-color {
-      color: #295C7A; /* themeColors.primary */
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    .bg-gradient-primary-secondary {
-      background: linear-gradient(135deg, #295C7A 0%, #F7A600 100%); /* themeColors.primary to themeColors.secondary */
+
+    h1 {
+      font-size: 24px; /* menor */
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #facc15; /* amarelo padrão */
     }
-    .text-white {
-      color: white;
+
+    p {
+      font-size: 14px;        /* menor */
+      opacity: 0.85;          /* discreto */
+      margin-bottom: 16px;    /* menos espaço */
+  }
+
+    h2 {
+      font-size: 18px;        /* menor */
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #facc15; /* amarelo */
     }
-    .border-gray-200 {
-      border-color: #E5E7EB; /* Muted color */
+
+    a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.5;
     }
   </style>
 </head>
-<body class="max-w-4xl mx-auto py-16 px-6">
-  <h1 class="text-title text-primary-color mb-8">Privacy Policy</h1>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">1. Data Collection</h2>
-    <p class="text-description">The application does not collect sensitive personal data. Only minimal information necessary for operation, such as usage history and local preferences, is stored.</p>
-  </section>
+<body>
+  <div class="container">
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">2. Use of Information</h2>
-    <p class="text-description">Information is restricted to the device itself and is not shared with third parties, except when required by law or by official stores (App Store and Google Play).</p>
-  </section>
+    <h1>Privacy Policy</h1>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">3. Storage</h2>
-    <p class="text-description">All evaluation data and credits are stored locally on the device, without automatic submission to external servers.</p>
-  </section>
+    <h2>Data Collection</h2>
+    <p>The application does not collect sensitive personal data. Only minimal information necessary for operation, such as usage history and local preferences, is stored.</p>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">4. Changes</h2>
-    <p class="text-description">This policy may be updated periodically to reflect improvements or legal requirements. The updated version will always be available within the application and on this website.</p>
-  </section>
+    <h2>Use of Information</h2>
+    <p>Information is restricted to the device itself and is not shared with third parties, except when required by law or by official stores (App Store and Google Play).</p>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">5. Consent</h2>
-    <p class="text-description">By using the application, the user agrees to the terms of this Privacy Policy.</p>
-  </section>
+    <h2>Storage</h2>
+    <p>All evaluation data and credits are stored locally on the device, without automatic submission to external servers.</p>
 
-  <div class="mt-12">
-    <a href="/" class="bg-gradient-primary-secondary text-white px-8 py-3 rounded-full text-button">Back to Home</a>
+    <h2>Changes</h2>
+    <p>This policy may be updated periodically to reflect improvements or legal requirements. The updated version will always be available within the application and on this website.</p>
+
+    <h2>Consent</h2>
+    <p>By using the application, the user agrees to the terms of this Privacy Policy.</p>
+
+    <div class="footer">
+      © 2025 Alemarco Raridades — Todos os direitos reservados
+    </div>
+
   </div>
 </body>
 </html>

@@ -6,56 +6,85 @@
   <title>Política de Privacidade - AleMarco Classics</title>
   <link rel="stylesheet" href="/index.css" />
   <link rel="stylesheet" href="./src/styles/typography.css" />
+
+  <!-- Mesma fonte do site -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    /* Custom styles for this page to integrate with themeColors and fonts */
     body {
-      background-color: #F4F1ED; /* themeColors.background */
-      color: #2C2C2C; /* themeColors.text */
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #000; /* mesmo do App.tsx */
+      color: #fff;
+      line-height: 1.4;
     }
-    .text-primary-color {
-      color: #295C7A; /* themeColors.primary */
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    .bg-gradient-primary-secondary {
-      background: linear-gradient(135deg, #295C7A 0%, #F7A600 100%); /* themeColors.primary to themeColors.secondary */
+
+    h1 {
+      font-size: 24px; /* menor */
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #facc15; /* amarelo padrão */
     }
-    .text-white {
-      color: white;
+
+    p {
+      font-size: 14px;        /* menor */
+      opacity: 0.85;          /* discreto */
+      margin-bottom: 16px;    /* menos espaço */
+  }
+
+    h2 {
+      font-size: 18px;        /* menor */
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #facc15; /* amarelo */
     }
-    .border-gray-200 {
-      border-color: #E5E7EB; /* Muted color */
+
+    a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.5;
     }
   </style>
 </head>
-<body class="max-w-4xl mx-auto py-16 px-6">
-  <h1 class="text-title text-primary-color mb-8">Política de Privacidade</h1>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">1. Coleta de Dados</h2>
-    <p class="text-description">O aplicativo não coleta dados pessoais sensíveis. São armazenadas apenas informações mínimas necessárias para funcionamento, como histórico de uso e preferências locais.</p>
-  </section>
+<body>
+  <div class="container">
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">2. Uso das Informações</h2>
-    <p class="text-description">As informações ficam restritas ao próprio dispositivo e não são compartilhadas com terceiros, exceto quando exigido por lei ou pelas lojas oficiais (App Store e Google Play).</p>
-  </section>
+    <h1>Política de Privacidade</h1>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">3. Armazenamento</h2>
-    <p class="text-description">Todos os dados de avaliações e créditos são armazenados localmente no dispositivo, sem envio automático a servidores externos.</p>
-  </section>
+    <h2>Coleta de Dados</h2>
+    <p>O aplicativo não coleta dados pessoais sensíveis. São armazenadas apenas informações mínimas necessárias para funcionamento, como histórico de uso e preferências locais.</p>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">4. Alterações</h2>
-    <p class="text-description">Esta política poderá ser atualizada periodicamente para refletir melhorias ou exigências legais. A versão atualizada estará sempre disponível dentro do aplicativo e neste site.</p>
-  </section>
+    <h2>Uso das Informações</h2>
+    <p>As informações ficam restritas ao próprio dispositivo e não são compartilhadas com terceiros, exceto quando exigido por lei ou pelas lojas oficiais (App Store e Google Play).</p>
 
-  <section class="mb-6">
-    <h2 class="text-section-title text-primary-color mb-2">5. Consentimento</h2>
-    <p class="text-description">Ao utilizar o aplicativo, o usuário concorda com os termos desta Política de Privacidade.</p>
-  </section>
+    <h2>Armazenamento</h2>
+    <p>Todos os dados de avaliações e créditos são armazenados localmente no dispositivo, sem envio automático a servidores externos.</p>
 
-  <div class="mt-12">
-    <a href="/" class="bg-gradient-primary-secondary text-white px-8 py-3 rounded-full text-button">Voltar</a>
+    <h2>Alterações</h2>
+    <p>Esta política poderá ser atualizada periodicamente para refletir melhorias ou exigências legais. A versão atualizada estará sempre disponível dentro do aplicativo e neste site.</p>
+
+    <h2>Consentimento</h2>
+    <p>Ao utilizar o aplicativo, o usuário concorda com os termos desta Política de Privacidade.</p>
+
+    <div class="footer">
+      © 2025 Alemarco Raridades — Todos os direitos reservados
+    </div>
+
   </div>
 </body>
 </html>
