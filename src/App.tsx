@@ -1010,9 +1010,9 @@ function App() {
           const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
           let url = "https://apps.apple.com/br/app/alemarco-finder/id6795579241"; 
           
-          //if (/android/i.test(userAgent)) {
-          //  url = "https://play.google.com/store/apps/details?id=com.alemarco.classics";
-          //}
+          if (/android/i.test(userAgent)) {
+            url = "https://play.google.com/store/apps/details?id=com.alemarco.finder";
+          }
           window.open(url, "_blank");
         }}
         className="mt-10 inline-flex items-center justify-center rounded-xl bg-transparent p-0"
@@ -1360,9 +1360,9 @@ function App() {
         onClick={() => {
           const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
           let url = "https://apps.apple.com/br/app/alemarco-finder/id6795579241";
-          //if (/android/i.test(userAgent)) {
-          //  url = "https://play.google.com/store/apps/details?id=com.alemarco.classics";
-          //}
+          if (/android/i.test(userAgent)) {
+            url = "https://play.google.com/store/apps/details?id=com.alemarco.finder";
+          }
           window.open(url, "_blank");
         }}
       >
