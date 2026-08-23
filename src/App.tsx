@@ -106,6 +106,22 @@ const translations = {
       button: "Ir para a Loja"
     },
 
+    finderApps: {
+      title: "AleMarco Finder",
+      subtitle: "Encontre seu clássico com uma busca inteligente - Tudo em um lugar só lugar!",
+      message: "Pare de procurar. Comece a encontrar!",
+      bullets:
+        {
+          primeiro:"✔ Você define seus critérios, nós encontramos os anúncios",
+          segundo:"✔ Uma única busca, todos os anúncios de diferentes plataformas em um só lugar",
+          terceiro:"✔ Organize o resultado do seu jeito",
+          quarto:"✔ Descubra aquela reridade antes que ela passe despercebida",
+          quinto:"✔ Filtros inteligentes para facilitar a tua busca",
+          sexto:"✔ Baixe Grátis"
+        },
+      button: "Ir para a Loja"
+    },
+
 
     ebooks: { 
       title:"Nossos eBooks reunem anos de conhecimento | e experiência prática",
@@ -285,6 +301,23 @@ const translations = {
         terceiro: "✔ Symptom-based diagnostic tool",
         quarto: "✔ Detailed maintenance history",
         quinto: "✔ Integrated GPS speedometer"
+      },
+      button: "Go to the Store"
+    },
+
+
+    finderApps: {
+      title: "AleMarco Finder",
+      subtitle: "Find your classic with a smart search - Everything in one place!",
+      message: "Stop searching. Start finding!",
+      bullets:
+      {
+        primeiro: "✔ You define your criteria, we find the ads",
+        segundo: "✔ A single search, all ads from different platforms in one place",
+        terceiro: "✔ Organize the results your way",
+        quarto: "✔ Discover that rare item before it goes unnoticed",
+        quinto: "✔ Smart filters to make your search easier",
+        sexto: "✔ Download for Free"
       },
       button: "Go to the Store"
     },
@@ -495,7 +528,7 @@ function App() {
  };
 
   const [viewMode, setViewMode] = useState<
-  "home" | "app" | "motor" | "classics" | "ebook" | "audiobook"
+  "home" | "app" | "motor" | "classics" | "finder" | "ebook" | "audiobook"
   >("home");
 
 
@@ -508,6 +541,10 @@ function App() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else if (hash === "#classics-page") {
         setViewMode("classics");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      else if (hash === "#finder-page") {
+        setViewMode("finder");
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     };
@@ -872,6 +909,122 @@ function App() {
 >
   <div className="max-w-5xl mx-auto text-center">
 
+ {/* Card do Alemarco Finder */}
+
+  <div id="finder-page" style={{ marginTop: "80px" }}>
+    <h2
+      className="text-4xl md:text-5xl font-bold mb-4"
+      style={{
+        color: "#FFFFFF",
+        fontFamily: '"DM Serif Display", Georgia, serif',
+      }}
+    >
+       {t.finderApps.title}
+    </h2>
+
+    <div
+      className="w-16 h-1 mx-auto mb-6"
+      style={{ backgroundColor: "#F7A600" }}
+    />
+        <p
+      className="text-lg mb-10"
+      style={{
+        color: "#AAAAAA",
+        fontFamily: '"Lato", Arial, sans-serif',
+        lineHeight: 1.7,
+        maxWidth: "700px",
+        margin: "0 auto",
+      }}
+    >
+
+      {t.finderApps.subtitle}
+    </p>
+
+
+  </div>  
+    {/* Card do Alemarco Finder */}
+
+    <div
+      className="rounded-xl shadow-lg p-10 mx-auto w-full mt-12"
+      style={{
+        backgroundColor: "#1A1F24",
+        border: "1px solid rgba(247, 166, 0, 0.25)",
+        maxWidth: "700px",
+      }}
+    >
+     
+
+     <h3
+        className="text-3xl font-bold mb-6"
+        style={{
+          fontFamily: '"DM Serif Display", Georgia, serif',
+          color: "#FFFFFF",
+        }}
+      >
+      {t.finderApps.message.split("|").map((line, i) => (
+        <span key={i} className="block">
+          {line.trim()}
+        </span>
+      ))}
+      </h3>
+
+
+        <div className="w-full flex justify-center mb-8">
+          <img
+            src="/alemarco_finder.png"
+            alt="Alemarco Finder"
+            className="w-full max-w-[800px] mx-auto object-contain rounded-lg shadow-xl"
+            style={{
+            borderRadius: 12,
+            }}
+         />
+        </div>
+
+        <div className="w-full flex flex-col md:flex-row items-start md:items-center gap-8 mb-6">
+            {/* Texto / bullets (flex-1 para ocupar espaço restante) */}
+        <div className="flex-1">
+        <ul
+          style={{
+            textAlign: "left",
+            fontFamily: '"Lato", Arial, sans-serif',
+            color: "#CCCCCC",
+            fontSize: "18px",
+            lineHeight: 1.8,
+            paddingLeft: "1.1rem",
+            margin: 0,
+          }}
+        >
+
+        <li>{t.finderApps.bullets.primeiro}</li>
+        <li>{t.finderApps.bullets.segundo}</li>
+        <li>{t.finderApps.bullets.terceiro}</li>
+        <li>{t.finderApps.bullets.quarto}</li>
+        <li>{t.finderApps.bullets.quinto}</li>
+        <li>{t.finderApps.bullets.sexto}</li>
+      </ul>
+      </div>
+      </div>
+
+      <button
+        onClick={() => {
+          const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+          let url = "https://apps.apple.com/br/app/alemarco-finder/id6795579241"; 
+          
+          //if (/android/i.test(userAgent)) {
+          //  url = "https://play.google.com/store/apps/details?id=com.alemarco.classics";
+          //}
+          window.open(url, "_blank");
+        }}
+        className="mt-10 inline-flex items-center justify-center rounded-xl bg-transparent p-0"
+      >
+         <img
+          src={storeBadge.src}
+          alt={storeBadge.alt}
+          className="h-12 w-auto max-w-full object-contain"
+         />
+      </button>
+    </div>
+
 {/* Seção do AleMarco Motor */}
   <div style={{ marginTop: "60px" }}>
     <h2
@@ -1102,6 +1255,131 @@ function App() {
 </section>
 </>
 )}
+
+
+{viewMode === "finder" && (
+<>
+<section
+  id="finder-page"
+  className="py-20 px-4 sm:px-6 lg:px-8"
+  style={{ backgroundColor: "#0F1419" }}
+>
+  <div className="max-w-5xl mx-auto text-center">
+  <div style={{ marginTop: "60px" }}>
+    <h2
+      className="text-4xl md:text-5xl font-bold mb-4"
+      style={{
+        color: "#FFFFFF",
+        fontFamily: '"DM Serif Display", Georgia, serif',
+      }}
+    >
+       {t.finderApps.title}
+    </h2>
+
+    <div
+      className="w-16 h-1 mx-auto mb-6"
+      style={{ backgroundColor: "#F7A600" }}
+    />
+      <p
+      className="text-lg mb-10"
+      style={{
+        color: "#AAAAAA",
+        fontFamily: '"Lato", Arial, sans-serif',
+        lineHeight: 1.7,
+        maxWidth: "700px",
+        margin: "0 auto",
+      }}
+    >
+
+      {t.finderApps.subtitle}
+    </p>
+  </div>
+
+
+    {/* Card do Alemarco Finder */}
+    <div
+      className="rounded-xl shadow-lg p-10 mx-auto w-full mt-12"
+      style={{
+        backgroundColor: "#1A1F24",
+        border: "1px solid rgba(247, 166, 0, 0.25)",
+        maxWidth: "700px",
+      }}
+    >  
+      <h3
+        className="text-3xl font-bold mb-6"
+        style={{
+          fontFamily: '"DM Serif Display", Georgia, serif',
+          color: "#FFFFFF",
+        }}
+      >
+      {t.finderApps.message.split("|").map((line, i) => (
+        <span key={i} className="block">
+          {line.trim()}
+        </span>
+      ))}
+      </h3>
+
+
+        <div className="w-full flex justify-center mb-8">
+          <img
+            src="/alemarco_finder.png"
+            alt="Alemarco Finder"
+            className="w-full max-w-[800px] mx-auto object-contain rounded-lg shadow-xl"
+            style={{
+            borderRadius: 12,
+            }}
+         />
+        </div>
+
+        <div className="w-full flex flex-col md:flex-row items-start md:items-center gap-8 mb-6">
+            {/* Texto / bullets (flex-1 para ocupar espaço restante) */}
+        <div className="flex-1">
+        <ul
+          style={{
+            textAlign: "left",
+            fontFamily: '"Lato", Arial, sans-serif',
+            color: "#CCCCCC",
+            fontSize: "18px",
+            lineHeight: 1.8,
+            paddingLeft: "1.1rem",
+            margin: 0,
+          }}
+        >
+
+        <li>{t.finderApps.bullets.primeiro}</li>
+        <li>{t.finderApps.bullets.segundo}</li>
+        <li>{t.finderApps.bullets.terceiro}</li>
+        <li>{t.finderApps.bullets.quarto}</li>
+        <li>{t.finderApps.bullets.quinto}</li>
+        <li>{t.finderApps.bullets.sexto}</li>
+      </ul>
+      </div>
+      </div>
+
+      <button
+        onClick={() => {
+          const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+          let url = "https://apps.apple.com/br/app/alemarco-finder/id6795579241";
+          //if (/android/i.test(userAgent)) {
+          //  url = "https://play.google.com/store/apps/details?id=com.alemarco.classics";
+          //}
+          window.open(url, "_blank");
+        }}
+      >
+       <img
+          src={storeBadge.src}
+          alt={storeBadge.alt}
+          className="h-12 w-auto max-w-full object-contain"
+         />
+      </button>
+    </div>
+  </div>
+</section>
+</>
+)}
+
+
+
 
 
 {viewMode === "motor" && (
