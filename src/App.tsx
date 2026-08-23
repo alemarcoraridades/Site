@@ -115,7 +115,7 @@ const translations = {
           primeiro:"✔ Você define seus critérios, nós encontramos os anúncios",
           segundo:"✔ Uma única busca, todos os anúncios de diferentes plataformas em um só lugar",
           terceiro:"✔ Organize o resultado do seu jeito",
-          quarto:"✔ Descubra aquela reridade antes que ela passe despercebida",
+          quarto:"✔ Descubra aquela raridade antes que ela passe despercebida",
           quinto:"✔ Filtros inteligentes para facilitar a tua busca",
           sexto:"✔ Baixe Grátis"
         },
@@ -315,7 +315,7 @@ const translations = {
         primeiro: "✔ You define your criteria, we find the ads",
         segundo: "✔ A single search, all ads from different platforms in one place",
         terceiro: "✔ Organize the results your way",
-        quarto: "✔ Discover that rare item before it goes unnoticed",
+        quarto: "✔ Discover that classic car before it goes unnoticed",
         quinto: "✔ Smart filters to make your search easier",
         sexto: "✔ Download for Free"
       },
