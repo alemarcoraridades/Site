@@ -108,7 +108,7 @@ const translations = {
 
     finderApps: {
       title: "AleMarco Finder",
-      subtitle: "Encontre seu clássico com uma busca inteligente - Tudo em um lugar só lugar!",
+      subtitle: "Encontre seu clássico com uma busca inteligente - Tudo em um só lugar!",
       message: "Pare de procurar. Comece a encontrar!",
       bullets:
         {
