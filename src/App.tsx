@@ -53,7 +53,7 @@ const translations = {
           icon: "app",
           title: "Apps",
           description: "Ferramentas inteligentes para Avaliação e Gestão do seu carro Clássico.",
-          features: ["Avaliação em tempo real", "Relatórios detalhados", "Painéis Inteligentes"],
+          features: ["Radar de raridades", "Avaliação em tempo real", "Relatórios detalhados", "Painéis Inteligentes"],
           cta: "Conhecer Apps",
           action: "scroll:app-page"
         },
@@ -101,7 +101,8 @@ const translations = {
         terceiro: "✔ Ferramenta de diagnóstico por sintomas",
         quarto: "✔ Histórico de manutenções detalhado",
         quinto: "✔ Velocímetro (GPS) integrado",
-        sexto: "✔ Teste por 30 dias Grátis"
+        sexto: "✔ Gerencie toda a sua garagem em um único painel",
+        setimo: "✔ Teste por 30 dias Grátis"
       },
       button: "Ir para a Loja"
     },
@@ -252,7 +253,7 @@ const translations = {
           icon: "app",
           title: "Apps",
           description: "Smart tools for evaluating and management your classic car.",
-          features: ["Real-time appraisal", "Detailed reports", "Smart dashboards"],
+          features: ["Classic cars radar", "Real-time appraisal", "Detailed reports", "Smart dashboards"],
           cta: "Discover Apps",
           action: "scroll:app-page"
         },
@@ -300,7 +301,9 @@ const translations = {
         segundo: "✔ Classics engines maintenance catalog",
         terceiro: "✔ Symptom-based diagnostic tool",
         quarto: "✔ Detailed maintenance history",
-        quinto: "✔ Integrated GPS speedometer"
+        quinto: "✔ Manage your entire garage from a single dashboard",        
+        sexto: "✔ Integrated GPS speedometer",
+        setimo: "✔ 30 days free Trial"
       },
       button: "Go to the Store"
     },
@@ -1110,6 +1113,7 @@ function App() {
         <li>{t.motorApps.bullets.quarto}</li>
         <li>{t.motorApps.bullets.quinto}</li>
         <li>{t.motorApps.bullets.sexto}</li>
+        <li>{t.motorApps.bullets.setimo}</li>
       </ul>
       </div>
       </div>
@@ -1477,6 +1481,7 @@ function App() {
         <li>{t.motorApps.bullets.quarto}</li>
         <li>{t.motorApps.bullets.quinto}</li>
         <li>{t.motorApps.bullets.sexto}</li>
+        <li>{t.motorApps.bullets.setimo}</li>
       </ul>
       </div>
       </div>
