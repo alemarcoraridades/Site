@@ -223,7 +223,7 @@ const translations = {
     },
     footer: {
       privacy: "Política de Privacidade",
-      copyright: "© 2025 AleMarco Raridades. Todos os direitos reservados.",
+      copyright: "© 2026 AleMarco Raridades. Todos os direitos reservados.",
       followUs: "Nos acompanhe",
       tagline: "Plataforma Digital para Antigomobilismo"
     }
@@ -427,7 +427,7 @@ const translations = {
     },
     footer: {
       privacy: "Privacy Policy",
-      copyright: "© 2025 AleMarco Raridades. All rights reserved.",
+      copyright: "© 2026 AleMarco Raridades. All rights reserved.",
       followUs: "Follow us",
       tagline: "Digital Platform for Classic Car Enthusiasts"
     }
@@ -444,6 +444,15 @@ function App() {
   );
 
   const t = translations[language];
+
+  useEffect(() => {
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'stylesheet';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap';
+    document.head.appendChild(fontLink);
+    return () => fontLink.remove();
+  }, []);
+
 
   const storeBadge = isAndroidDevice
    ? {
@@ -559,7 +568,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0F1419' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#0F1419', fontFamily: 'Rajdhani, sans-serif'}}>
       {/* Navigation */}
       {viewMode === "home" && (
       <>
