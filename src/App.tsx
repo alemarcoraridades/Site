@@ -75,6 +75,16 @@ const translations = {
         }
       ]
     },
+    journey: {
+      title: "Da busca ao cuidado do seu clássico",
+      subtitle: "Encontre, avalie e cuide do seu clássico com as ferramentas AleMarco Raridades.",
+      steps: { find: "ENCONTRE", evaluate: "AVALIE", care: "CUIDE" },
+      finder: { message: "Pare de procurar e comece a encontrar.", description: "Encontre anúncios de carros clássicos em um só lugar.", cta: "Baixar o Finder" },
+      classics: { message: "Avalie antes de comprar.", description: "Conheça melhor o veículo antes de tomar sua decisão.", cta: "Conhecer o Classics" },
+      motor: { message: "Ative o painel inteligente para o seu clássico.", description: "Acompanhe manutenções e o histórico do veículo.", cta: "Conhecer o Motor" },
+      allApps: "Conheça todos os apps"
+    },
+
     apps: { 
       title: "AleMarco Classics",
       subtitle: "Seu futuro Clássico sob avaliação especializada - rápido, fácil e totalmente offline!",  
@@ -274,6 +284,16 @@ const translations = {
           action: "scroll:audiobook-page"
         }
       ]
+    },
+
+    journey: {
+      title: "From finding to caring for your classic",
+      subtitle: "Find, evaluate, and care for your classic with AleMarco Raridades tools.",
+      steps: { find: "FIND", evaluate: "EVALUATE", care: "CARE" },
+      finder: { message: "Stop searching. Start finding.", description: "Find classic-car listings in one place.", cta: "Get Finder" },
+      classics: { message: "Evaluate before you buy.", description: "Learn more about the vehicle before making your decision.", cta: "Discover Classics" },
+      motor: { message: "Activate the smart dashboard for your classic.", description: "Track maintenance and your vehicle history.", cta: "Discover Motor" },
+      allApps: "Explore all apps"
     },
 
     apps: { 
@@ -798,7 +818,161 @@ function App() {
           </div>
         </div>
       </section>
-      
+
+       {/* Jornada dos apps — segue a composição visual das seções de produtos existentes */}
+      <section
+        id="app-journey"
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: '#1A1F26' }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-4"
+              style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}
+            >
+              {t.journey.title}
+            </h2>
+            <div className="w-16 h-1 mx-auto mb-6" style={{ backgroundColor: themeColors.secondary }} />
+            <p
+              className="text-lg max-w-3xl mx-auto"
+              style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif', lineHeight: 1.7 }}
+            >
+              {t.journey.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article
+              className="p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative group border flex flex-col"
+              style={{ backgroundColor: '#0F1419', borderColor: themeColors.secondary + '33', boxShadow: `inset 0 0 20px ${themeColors.secondary}11` }}
+            >
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `radial-gradient(circle at center, ${themeColors.secondary}22, transparent)`, pointerEvents: 'none' }} />
+              <div className="mb-6 flex items-center gap-3 relative z-10">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-lg" style={{ backgroundColor: themeColors.primary + '22', color: themeColors.secondary }}>
+                  <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/89/1e/65/891e652c-e401-15ef-a25b-454b12de6310/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+                    alt="Ícone do aplicativo AleMarco Finder"
+                    className="h-12 w-12 rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </span>
+                <span className="text-sm font-bold tracking-widest" style={{ color: themeColors.secondary }}>01</span>
+              </div>
+              <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.steps.find}
+              </p>
+              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Finder</h3>
+              <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.finder.message}
+              </p>
+              <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.finder.description}
+              </p>
+              <a
+                href={isAndroidDevice ? 'https://play.google.com/store/apps/details?id=com.alemarco.finder' : 'https://apps.apple.com/br/app/alemarco-finder/id6795579241'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg relative z-10 group/btn overflow-hidden border text-center"
+                style={{ backgroundColor: themeColors.secondary, borderColor: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}
+              >
+                <span className="absolute inset-0 group-hover/btn:translate-y-0" style={{ backgroundColor: themeColors.primary, transform: 'translateY(100%)', transition: 'transform 0.3s ease' }} />
+                <span className="relative z-10">{t.journey.finder.cta} <ArrowRight className="inline h-4 w-4 ml-1" /></span>
+              </a>
+            </article>
+
+            <article
+              className="p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative group border flex flex-col"
+              style={{ backgroundColor: '#0F1419', borderColor: themeColors.secondary + '33', boxShadow: `inset 0 0 20px ${themeColors.secondary}11` }}
+            >
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `radial-gradient(circle at center, ${themeColors.secondary}22, transparent)`, pointerEvents: 'none' }} />
+              <div className="mb-6 flex items-center gap-3 relative z-10">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-lg" style={{ backgroundColor: themeColors.primary + '22', color: themeColors.secondary }}>
+                  <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8e/c3/74/8ec37410-f915-8c36-ab57-0a4f4b5ffc24/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
+                    alt="Ícone do aplicativo AleMarco Classics"
+                    className="h-12 w-12 rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </span>
+                <span className="text-sm font-bold tracking-widest" style={{ color: themeColors.secondary }}>02</span>
+              </div>
+              <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.steps.evaluate}
+              </p>
+              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Classics</h3>
+              <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.classics.message}
+              </p>
+              <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.classics.description}
+              </p>
+              <a
+                href="https://sonhocarroantigo.com.br/alemarco-classics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg relative z-10 group/btn overflow-hidden border text-center"
+                style={{ backgroundColor: themeColors.secondary, borderColor: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}
+              >
+                <span className="absolute inset-0 group-hover/btn:translate-y-0" style={{ backgroundColor: themeColors.primary, transform: 'translateY(100%)', transition: 'transform 0.3s ease' }} />
+                <span className="relative z-10">{t.journey.classics.cta} <ArrowRight className="inline h-4 w-4 ml-1" /></span>
+              </a>
+            </article>
+
+            <article
+              className="p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative group border flex flex-col"
+              style={{ backgroundColor: '#0F1419', borderColor: themeColors.secondary + '33', boxShadow: `inset 0 0 20px ${themeColors.secondary}11` }}
+            >
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `radial-gradient(circle at center, ${themeColors.secondary}22, transparent)`, pointerEvents: 'none' }} />
+              <div className="mb-6 flex items-center gap-3 relative z-10">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-lg" style={{ backgroundColor: themeColors.primary + '22', color: themeColors.secondary }}>
+                  <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d7/52/90/d752906d-cd54-d4ac-d815-f8e602f4cc7c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+                    alt="Ícone do aplicativo AleMarco Motor"
+                    className="h-12 w-12 rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </span>
+                <span className="text-sm font-bold tracking-widest" style={{ color: themeColors.secondary }}>03</span>
+              </div>
+              <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.steps.care}
+              </p>
+              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Motor</h3>
+              <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.motor.message}
+              </p>
+              <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
+                {t.journey.motor.description}
+              </p>
+              <a
+                href="https://sonhocarroantigo.com.br/alemarco-motor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg relative z-10 group/btn overflow-hidden border text-center"
+                style={{ backgroundColor: themeColors.secondary, borderColor: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}
+              >
+                <span className="absolute inset-0 group-hover/btn:translate-y-0" style={{ backgroundColor: themeColors.primary, transform: 'translateY(100%)', transition: 'transform 0.3s ease' }} />
+                <span className="relative z-10">{t.journey.motor.cta} <ArrowRight className="inline h-4 w-4 ml-1" /></span>
+              </a>
+            </article>
+          </div>
+
+          <div className="text-center mt-8">
+            <button
+              onClick={() => handleProductClick('scroll:app-page')}
+              className="inline-flex items-center space-x-2 px-6 py-3 rounded-lg text-white font-medium border transition-all duration-300 hover:shadow-lg"
+              style={{ backgroundColor: 'transparent', borderColor: themeColors.secondary + '66', color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}
+            >
+              <span>{t.journey.allApps}</span>
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
 
       {/* Products Section */}
       <section id="products" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#1A1F26' }}>
