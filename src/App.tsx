@@ -862,13 +862,18 @@ function App() {
               <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.steps.find}
               </p>
-              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Finder</h3>
+              <div className="mb-3 relative z-10">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Finder</h3>
+              </div>
               <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.finder.message}
               </p>
               <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.finder.description}
               </p>
+              <div className="mb-4 inline-flex self-start items-center gap-2 rounded-full px-4 py-2 text-sm font-bold relative z-10" style={{ color: themeColors.secondary, backgroundColor: themeColors.secondary + '18', fontFamily: 'Lato, Arial, sans-serif' }}>
+                <Download className="h-4 w-4" /> 80 downloads em 2 semanas
+              </div>
               <a
                 href={isAndroidDevice ? 'https://play.google.com/store/apps/details?id=com.alemarco.finder' : 'https://apps.apple.com/br/app/alemarco-finder/id6795579241'}
                 target="_blank"
@@ -900,13 +905,18 @@ function App() {
               <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.steps.evaluate}
               </p>
-              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Classics</h3>
+              <div className="mb-3 relative z-10">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Classics</h3>
+              </div>
               <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.classics.message}
               </p>
               <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.classics.description}
               </p>
+              <div className="mb-4 inline-flex self-start items-center gap-2 rounded-full px-4 py-2 text-sm font-bold relative z-10" style={{ color: themeColors.secondary, backgroundColor: themeColors.secondary + '18', fontFamily: 'Lato, Arial, sans-serif' }}>
+                <Download className="h-4 w-4" /> 1 mil+ downloads nas lojas
+              </div>
               <a
                 href="https://sonhocarroantigo.com.br/alemarco-classics"
                 target="_blank"
@@ -938,13 +948,18 @@ function App() {
               <p className="text-sm font-bold tracking-widest mb-2 relative z-10" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.steps.care}
               </p>
-              <h3 className="text-2xl font-bold mb-3 relative z-10" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Motor</h3>
+              <div className="mb-3 relative z-10">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#FFFFFF', fontFamily: '"DM Serif Display", Georgia, serif' }}>AleMarco Motor</h3>
+              </div>
               <p className="mb-3 relative z-10 font-semibold" style={{ color: themeColors.secondary, fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.motor.message}
               </p>
               <p className="mb-8 flex-1 relative z-10" style={{ color: '#AAAAAA', fontFamily: 'Lato, Arial, sans-serif' }}>
                 {t.journey.motor.description}
               </p>
+              <div className="mb-4 inline-flex self-start items-center gap-2 rounded-full px-4 py-2 text-sm font-bold relative z-10" style={{ color: themeColors.secondary, backgroundColor: themeColors.secondary + '18', fontFamily: 'Lato, Arial, sans-serif' }}>
+                <Download className="h-4 w-4" /> 1,8 mil+ downloads nas lojas
+              </div>
               <a
                 href="https://sonhocarroantigo.com.br/alemarco-motor"
                 target="_blank"
